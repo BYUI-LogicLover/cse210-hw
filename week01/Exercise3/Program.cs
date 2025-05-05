@@ -28,9 +28,7 @@ class Program
                     Console.WriteLine("Too high! Try again.");
                 } else {
                     isCorrect = true;
-                    Console.WriteLine(
-                        $"Congratulations! You've guessed the number {secretNumber} in {attempts} attempts.");
-                    
+                    Console.WriteLine($"Congratulations! You've guessed the number {secretNumber} in {attempts} attempts.");
                     Console.WriteLine("Would you like to play again? (y/n)");
                     string playAgain = Console.ReadLine().ToLower();
                     if (playAgain == "y") {
