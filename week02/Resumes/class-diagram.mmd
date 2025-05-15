@@ -1,0 +1,18 @@
+classDiagram
+    class Program {
+        +Main(string[] args)
+    }
+    class Resume {
+        +string _name
+        +List~Job~ _jobs
+        +Display()
+    }
+    class Job {
+        +string _company
+        +string _jobTitle
+        +int _startYear
+        +int _endYear
+    }
+
+    Program ..> Resume : uses
+    Resume "1" o-- "*" Job : contains
