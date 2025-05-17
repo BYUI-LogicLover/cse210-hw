@@ -22,7 +22,7 @@ namespace Journal
             return $"[{Timestamp:yyyy-MM-dd HH:mm:ss}]|Prompt: {Prompt}|{Content}";
         }
         
-        public static DateTime GetTimestamp(string timestamp) 
+        private static DateTime GetTimestamp(string timestamp) 
         {
             DateTime parsedTimestamp;
             timestamp = timestamp.Trim('[', ']');
