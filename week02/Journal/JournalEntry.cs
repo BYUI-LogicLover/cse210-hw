@@ -46,7 +46,7 @@ namespace Journal
                 {
                     foreach (var entry in journalEntries)
                     {
-                        writer.WriteLine(entry.ToString());
+                        writer.WriteLine($"[{entry.Timestamp:yyyy-MM-dd HH:mm:ss}], {entry.Prompt}, {entry.Content}");
                     }
                     writer.Close();
                 }
@@ -69,7 +69,7 @@ namespace Journal
                 List<JournalEntry> entries = new List<JournalEntry>();
                 foreach (var line in lines)
                 {
-                    string[] parts = line.Split('|');
+                    string[] parts = line.Split(',');
                     if (parts.Length == 3)
                     {
                         entries.Add(new JournalEntry(GetTimestamp(parts[0]), parts[1], parts[2]));
