@@ -1,5 +1,6 @@
 using System;
-
+// Mindfulness App, exceeds requirements by including a grounding activity
+// and a spinner animation for the listing activity. Also Added counting animations for the breathing
 namespace Mindfulness
 {
     class Program
