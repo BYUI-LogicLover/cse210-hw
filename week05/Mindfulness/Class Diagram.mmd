@@ -1,0 +1,41 @@
+---
+Mindfulness Class Diagram
+---
+classDiagram
+    Activity <|-- ListingActivity
+    Activity <|-- ReflectingActivity
+    Activity <|-- BreathingActivity
+    
+    class Activity {
+        -String name
+        -String description
+        -int duration
+        +void startMessage()
+        +void endMessage()
+        +void startMessage()
+        +void Start()
+        +void PauseTimer()
+        +Activity(String name, String description)
+    }
+
+    class ListingActivity {
+        +List<String> listeningPrompt
+        -Random random
+        +List<String> responses
+        +ListingActivity()
+        +String getPrompt()
+    }
+
+    class ReflectingActivity {
+        +String reflectionPrompt
+        +String[] reflectionResponses
+        +void startReflection()
+        +void endReflection()
+        -Random random
+        +String getPrompt()
+    }
+
+    class BreathingActivity {
+        +RunMessage runMessage
+        +BreathingActivity(String name, String description)
+    }
