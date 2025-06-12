@@ -1,5 +1,5 @@
 using EternalQuest;
-
+// Exceeds core requirements by implementing a negative goal type.
 class Program
 {
     static void Main(string[] args)
